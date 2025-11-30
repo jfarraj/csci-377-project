@@ -1,0 +1,40 @@
+11/29/25 -----
+- Make a doubley linked-list for implementing to the list for the accounts
+- Bank system 
+    - add accounts 
+    - call for balances
+    - deposit and withdrawal 
+    - transfer money to other accounts
+    - etc. pending (add ideas)
+- What should be the account number?:
+    - it is a double digit variable that will determine the id of the account beside the person's name
+- BankList.h
+    - will hold all the nodes and be able to display information of the users
+    - should be able to:
+        - func: addNewAccount(name, accountnumber, checking, savings)
+            - add new person and their node to the list
+        - call for account names based off of account numbers (func: getAccInfo(int accNum))
+        - assign account numbers randomly (01-10) (func: assignAccNum())
+            - this will need:
+                - rng inside the function itself 
+                - new account's name
+                - new account's balance and savings
+                - it uses the setter from the person's class
+        - sending money to savings and or checking (func: transferSelf(int accNumOrigin, double amountSending, bool saveOrCheck))
+                - true: savings, false: checking
+            - adding a savings account in the person's class
+        - call for balances based off account number (func: getBalance(int accNum))
+            - This will display both the checking and savings of the account
+        - sending money to another account(func: payment(int accNumOrigin, double amountSending, int accNumDestination))
+            - Always default to user's checking acount.
+    - Display methods (using comparison algorithms)
+        - func: displayAccounts()
+            - Will display all users from smallest account numbr to largest account number
+        - func: displayUserCheckings()
+            - Will display all user checking accounts from least to greatest
+        - func: displayUserSavings()
+            - Will display all user savings accounts from least to greatest
+        - func: displayWealth() - option 
+            - will displau all the user's gross account value from least to greatest
+        - 
+        
